@@ -7,9 +7,8 @@ export default function Menu() {
     <main>
       <h2>Our Menu</h2>
       <div>
-        {pizzaData.map((pizza) => (
-          <Pizza pizza={pizza} />
-        ))}
+        {pizzaData.length !== 0 &&
+          pizzaData.map((pizza) => <Pizza pizza={pizza} key={pizza.name} />)}
       </div>
     </main>
   );
