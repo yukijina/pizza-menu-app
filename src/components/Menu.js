@@ -4,7 +4,7 @@ import pizzaData from '../data';
 
 export default function Menu() {
   return (
-    <main>
+    <main className='menu'>
       <h2>Our Menu</h2>
       {pizzaData.length !== 0 ? (
         <>
@@ -13,11 +13,11 @@ export default function Menu() {
             from our storne oven, all organic, all delicious.
           </p>
 
-          <>
+          <div className='pizzas'>
             {pizzaData.map((pizza) => (
               <Pizza pizza={pizza} key={pizza.name} />
             ))}
-          </>
+          </div>
         </>
       ) : (
         <p>We're still working on our menu. Please come back later 🍕</p>

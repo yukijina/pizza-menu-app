@@ -2,12 +2,12 @@ import React from 'react';
 
 export default function Pizza({ pizza }) {
   return (
-    <div>
+    <div className='pizza'>
       <img src={pizza.photoName} alt={pizza.name} />
       <div>
         <h3>{pizza.name}</h3>
         <p>{pizza.ingredients}</p>
-        <span>{!pizza.price ? +pizza.price + 3 : 'Sold Out'}</span>
+        <span>{!pizza.soldOut ? 'SOLD OUT' : +pizza.price + 3}</span>
       </div>
     </div>
   );
