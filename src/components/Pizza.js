@@ -7,7 +7,7 @@ export default function Pizza({ pizza }) {
       <div>
         <h3>{pizza.name}</h3>
         <p>{pizza.ingredients}</p>
-        <span>{!pizza.soldOut ? 'SOLD OUT' : +pizza.price + 3}</span>
+        <span>{pizza.soldOut ? 'SOLD OUT' : +pizza.price + 3}</span>
       </div>
     </div>
   );
